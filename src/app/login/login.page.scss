@@ -1,0 +1,95 @@
+.logotext {
+  font-family: OpenSans-ExtraBold;
+  font-size: 36px;
+  padding: 0;
+  color: #0cd1e8;
+}
+.logotext:hover {
+  color: #0cd1e8;
+}
+.logoContainer {
+  padding-top: 10%;
+}
+
+.logoContainer p {
+  padding: 0 6%;
+  color: #f2f2f2;
+  font-family: OpenSans-Italic;
+  font-size: 16px;
+}
+.item {
+  border-radius: 26px;
+  border: 2px solid #b9becf;
+  outline: none;
+  color: #f2f2f2;
+  --ion-background-color: transparent;
+  margin: 4% auto 0 auto;
+}
+.item ion-input {
+  font-family: OpenSans-Italic;
+}
+.item:first-child {
+  margin-top: 0;
+}
+.padTopZero {
+  padding-top: 0;
+}
+.forgPwd {
+  border-bottom: 2px solid #24ae3e;
+  border: none;
+}
+.formSubBtn {
+  padding: 16px;
+  width: 100%;
+  border-radius: 26px;
+  background: transparent;
+  border: 2px solid #b9becf;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+}
+.btmText {
+  padding: 6px;
+}
+.btmText label,
+.btmText a {
+  color: #f2f2f2;
+  font-size: 16px;
+  text-decoration: none;
+}
+ion-fab .fabIcon {
+  --ion-color-base: transparent !important;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2;
+}
+.fabIcon ion-icon,
+.close-icon {
+  color: #f2f2ff;
+}
+
+ion-content {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00a99d+0,01a4ab+31,009eb1+59,0099b9+100 */
+  --ion-background-color: rgb(0, 169, 157); /* Old browsers */
+  --ion-background-color: -moz-linear-gradient(
+    top,
+    rgba(0, 169, 157, 1) 0%,
+    rgba(1, 164, 171, 1) 31%,
+    rgba(0, 158, 177, 1) 59%,
+    rgba(0, 153, 185, 1) 100%
+  ); /* FF3.6-15 */
+  --ion-background-color: -webkit-linear-gradient(
+    top,
+    rgba(0, 169, 157, 1) 0%,
+    rgba(1, 164, 171, 1) 31%,
+    rgba(0, 158, 177, 1) 59%,
+    rgba(0, 153, 185, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  --ion-background-color: linear-gradient(
+    to bottom,
+    rgba(0, 169, 157, 1) 0%,
+    rgba(1, 164, 171, 1) 31%,
+    rgba(0, 158, 177, 1) 59%,
+    rgba(0, 153, 185, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a99d', endColorstr='#0099b9',GradientType=0 ); /* IE6-9 */
+}

@@ -1,0 +1,317 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/product-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>PRODUCT DETAILS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides [options]="slideOptions" pager="true" #slider>
+    <ion-slide>
+      <a href="#">
+        <ion-img src="../assets/icon/orderdetails1.jpeg" alt="logoImg" class="logoImg"></ion-img>
+      </a>
+    </ion-slide>
+    <ion-slide>
+      <a href="#">
+        <ion-img src="../assets/icon/orderdetails2.jpeg" alt="logoImg" class="logoImg"></ion-img>
+      </a>
+    </ion-slide>
+    <ion-slide>
+      <a href="#">
+        <ion-img src="../assets/icon/orderdetails3.jpeg" alt="logoImg" class="logoImg"></ion-img>
+      </a>
+    </ion-slide>
+    <ion-slide>
+      <a href="#">
+        <ion-img src="../assets/icon/orderdetails4.jpeg" alt="logoImg" class="logoImg"></ion-img>
+      </a>
+    </ion-slide>
+  </ion-slides>
+  <ion-card-content class="productDetails">
+    <ion-card-title>Jocky Boys
+      <ion-icon name="heart" float-right></ion-icon>
+    </ion-card-title>
+    <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+    <ion-text class="productAmount">
+      <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
+      <ion-label color="secondary" class="min-discount">35% off
+        <div float-right>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+      </ion-label>
+    </ion-text>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item class="cartQuantity">
+            <ion-label>QTY:</ion-label>
+            <ion-select interface="popover">
+              <ion-select-option value="one" [selected]="true">1</ion-select-option>
+              <ion-select-option value="two">2</ion-select-option>
+              <ion-select-option value="three">3</ion-select-option>
+              <ion-select-option value="four">4</ion-select-option>
+              <ion-select-option value="four">5</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item class="cartQuantity">
+            <ion-label>SIZES:</ion-label>
+            <ion-select interface="popover">
+              <ion-select-option value="one" [selected]="true">M</ion-select-option>
+              <ion-select-option value="two">S</ion-select-option>
+              <ion-select-option value="three">L</ion-select-option>
+              <ion-select-option value="four">XL</ion-select-option>
+              <ion-select-option value="four">XXL</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-segment [(ngModel)]="segment" color="secondary">
+      <ion-segment-button value="details">
+        Details
+      </ion-segment-button>
+      <ion-segment-button value="desc">
+        Description
+      </ion-segment-button>
+      <ion-segment-button value="review">
+        Review
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="segment">
+      <div *ngSwitchCase="'details'" class="prodDetailsTab">
+        <ion-item class="prodTabHead">
+          <ion-label>Product Details</ion-label>
+        </ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-card-content>
+                <ion-card-title>
+                  Color:
+                </ion-card-title>
+                <ion-card-title>
+                  Febric:
+                </ion-card-title>
+                <ion-card-title>
+                  Sleeve:
+                </ion-card-title>
+                <ion-card-title>
+                  Neck Type:
+                </ion-card-title>
+                <ion-card-title>
+                  Pattern:
+                </ion-card-title>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="6">
+              <ion-card-content>
+                <ion-card-title>
+                  Navy Blue
+                </ion-card-title>
+                <ion-card-title>
+                  Cotton
+                </ion-card-title>
+                <ion-card-title>
+                  Full Sleeve
+                </ion-card-title>
+                <ion-card-title>
+                  Polo Neck
+                </ion-card-title>
+                <ion-card-title>
+                  Solid
+                </ion-card-title>
+              </ion-card-content>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngSwitchCase="'desc'" class="prodDescTab">
+        <ion-item class="prodTabHead">
+          <ion-label>Product Description</ion-label>
+        </ion-item>
+        <p>
+          A jacket is a mid-stomach–length garment for the upper body. A jacket typically has sleeves, and fastens in
+          the front or slightly on the side. A jacket is generally lighter, tighter-fitting, and less insulating than a
+          coat, which is outerwear. Some jackets are fashionable, while others serve as protective clothing.
+        </p>
+      </div>
+      <div *ngSwitchCase="'review'" class="reviewTab">
+        <ion-item>
+          <ion-badge slot="start">5 <ion-icon name="star"></ion-icon>
+          </ion-badge>
+          <ion-text>
+            <ion-label>Amazing product!</ion-label>
+            <p>This product is amazing, Suitable for winter and spring, hihgly recomended.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">4 <ion-icon name="star"></ion-icon>
+          </ion-badge>
+          <ion-text>
+            <ion-label>Higly recomended product!</ion-label>
+            <p>This product is Excelent, Suitable for winter and spring, hihgly recomended.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start" color="warning">3 <ion-icon name="star"></ion-icon>
+          </ion-badge>
+          <ion-text>
+            <ion-label> Good product!</ion-label>
+            <p>This product is Good, Suitable for winter only.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start" color="danger">1 <ion-icon name="star"></ion-icon>
+          </ion-badge>
+          <ion-text>
+            <ion-label> Bad product!</ion-label>
+            <p>This product is so bad, Don't buy this.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">5 <ion-icon name="star"></ion-icon>
+          </ion-badge>
+          <ion-text>
+            <ion-label>Amazing product!</ion-label>
+            <p>This product is amazing, Suitable for winter and spring, hihgly recomended.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start" color="warning">3 <ion-icon name="star"></ion-icon>
+          </ion-badge>
+          <ion-text>
+            <ion-label> Average product!</ion-label>
+            <p>This product is Average, Suitable for winter only.</p>
+          </ion-text>
+        </ion-item>
+      </div>
+    </div>
+  </ion-card-content>
+  <ion-item class="SimilarProduct">
+    <ion-label>Similar Product</ion-label>
+  </ion-item>
+  <ion-slides [options]="slideOptions2" #slider class="similarProductList">
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <a href="/product-details">
+                <ion-card-content class="category">
+                  <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
+                  <ion-card-title>Jocky Boys</ion-card-title>
+                  <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+                  <ion-text>
+                    <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
+                    <ion-label color="secondary" class="min-discount">35% off</ion-label>
+                  </ion-text>
+                </ion-card-content>
+              </a>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card>
+              <a href="/product-details">
+                <ion-card-content class="category">
+                  <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
+                  <ion-card-title>Jocky Boys</ion-card-title>
+                  <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+                  <ion-text>
+                    <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
+                    <ion-label color="secondary" class="min-discount">35% off</ion-label>
+                  </ion-text>
+                </ion-card-content>
+              </a>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <a href="#">
+                <ion-card-content class="category">
+                  <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
+                  <ion-card-title>Jocky Boys</ion-card-title>
+                  <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+                  <ion-text>
+                    <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
+                    <ion-label color="secondary" class="min-discount">35% off</ion-label>
+                  </ion-text>
+                </ion-card-content>
+              </a>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card>
+              <a href="#">
+                <ion-card-content class="category">
+                  <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
+                  <ion-card-title>Jocky Boys</ion-card-title>
+                  <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+                  <ion-text>
+                    <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
+                    <ion-label color="secondary" class="min-discount">35% off</ion-label>
+                  </ion-text>
+                </ion-card-content>
+              </a>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <a href="#">
+                <ion-card-content class="category">
+                  <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
+                  <ion-card-title>Jocky Boys</ion-card-title>
+                  <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+                  <ion-text>
+                    <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
+                    <ion-label color="secondary" class="min-discount">35% off</ion-label>
+                  </ion-text>
+                </ion-card-content>
+              </a>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card>
+              <a href="#">
+                <ion-card-content class="category">
+                  <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
+                  <ion-card-title>Jocky Boys</ion-card-title>
+                  <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+                  <ion-text>
+                    <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
+                    <ion-label color="secondary" class="min-discount">35% off</ion-label>
+                  </ion-text>
+                </ion-card-content>
+              </a>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+  <ion-button ion-button color="light" expand="full" class="addCartBtn">Add To Cart</ion-button>
+  <ion-button ion-button color="secondary" expand="full" class="buyBtn">Buy Now</ion-button>
+</ion-content>
+
+<!-- size, quantity, add to cart and buy now -->

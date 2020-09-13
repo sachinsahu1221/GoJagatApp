@@ -1,0 +1,909 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="7" class="logotext">
+          <ion-text>GOJAGAT</ion-text>
+        </ion-col>
+        <ion-col size="3" text-right class="header-icons">
+          <a href="/notification"
+            ><ion-icon name="notifications"> </ion-icon
+          ></a>
+          <ion-badge color="danger">2</ion-badge>
+        </ion-col>
+        <ion-col size="2" text-right class="header-icons padding-right-10">
+          <a href="/login"><ion-icon name="person"></ion-icon></a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+  <ion-grid class="searchfield">
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating"
+            >Search for Categories, Brands and more..</ion-label
+          >
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="segment" color="secondary">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="wish">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="cart">
+      <ion-icon name="cart"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="segment">
+    <div *ngSwitchCase="'home'">
+      <ion-slides
+        [options]="slideOptions"
+        pager="true"
+        #slider
+        (ionSlidesDidLoad)="slidesDidLoad(slider)"
+      >
+        <ion-slide>
+          <a href="#">
+            <ion-img
+              src="../assets/icon/sliderImg1.jpg"
+              alt="logoImg"
+              class="logoImg"
+            ></ion-img>
+          </a>
+        </ion-slide>
+        <ion-slide>
+          <a href="#">
+            <ion-img
+              src="../assets/icon/sliderImg2.jpg"
+              alt="logoImg"
+              class="logoImg"
+            ></ion-img>
+          </a>
+        </ion-slide>
+        <ion-slide>
+          <a href="#">
+            <ion-img
+              src="../assets/icon/sliderImg3.jpg"
+              alt="logoImg"
+              class="logoImg"
+            ></ion-img>
+          </a>
+        </ion-slide>
+        <ion-slide>
+          <a href="#">
+            <ion-img
+              src="../assets/icon/sliderImg4.jpg"
+              alt="logoImg"
+              class="logoImg"
+            ></ion-img>
+          </a>
+        </ion-slide>
+        <ion-slide>
+          <a href="#">
+            <ion-img
+              src="../assets/icon/sliderImg5.jpg"
+              alt="logoImg"
+              class="logoImg"
+            ></ion-img>
+          </a>
+        </ion-slide>
+      </ion-slides>
+      <ion-item class="topCategories">
+        <ion-label>Top Categories</ion-label>
+      </ion-item>
+      <ion-card margin>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-card>
+                <a href="/product-list">
+                  <ion-card-content class="category">
+                    <ion-img
+                      src="../assets/icon/fashionthumb.jpg"
+                      alt="logoImg"
+                      class="logoImg"
+                    ></ion-img>
+                    <ion-card-title>Fashion</ion-card-title>
+                  </ion-card-content>
+                </a>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <a href="/product-list">
+                  <ion-card-content class="category">
+                    <ion-img
+                      src="../assets/icon/health&beautythumb.jpg"
+                      alt="logoImg"
+                      class="logoImg"
+                    ></ion-img>
+                    <ion-card-title>Health & Beauty</ion-card-title>
+                  </ion-card-content>
+                </a>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-card>
+                <a href="/product-list">
+                  <ion-card-content class="category">
+                    <ion-img
+                      src="../assets/icon/shoesthumb.jpg"
+                      alt="logoImg"
+                      class="logoImg"
+                    ></ion-img>
+                    <ion-card-title>Shoes</ion-card-title>
+                  </ion-card-content>
+                </a>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <a href="/product-list">
+                  <ion-card-content class="category">
+                    <ion-img
+                      src="../assets/icon/toys&babyproductthumb.jpg"
+                      alt="logoImg"
+                      class="logoImg"
+                    ></ion-img>
+                    <ion-card-title>Toys & Games</ion-card-title>
+                  </ion-card-content>
+                </a>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-card>
+                <a href="/product-list">
+                  <ion-card-content class="category">
+                    <ion-img
+                      src="../assets/icon/watches&sunglassesthumb.jpg"
+                      alt="logoImg"
+                      class="logoImg"
+                    >
+                    </ion-img>
+                    <ion-card-title>Watches & Sunglasses</ion-card-title>
+                  </ion-card-content>
+                </a>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <a href="/product-list">
+                  <ion-card-content class="category">
+                    <ion-img
+                      src="../assets/icon/luggage&handbagthumb.jpg"
+                      alt="logoImg"
+                      class="logoImg"
+                    ></ion-img>
+                    <ion-card-title>Luggage & Handbags</ion-card-title>
+                  </ion-card-content>
+                </a>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <ion-item class="topCategories">
+        <ion-label>Trending Now</ion-label>
+      </ion-item>
+      <ion-card margin>
+        <ion-grid class="trendingNow">
+          <ion-row>
+            <ion-col>
+              <a href="/product-details">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/trending1thumb.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                  <ion-card-title>Shofiee</ion-card-title>
+                  <ion-card-subtitle
+                    >Womens Party Wear & Casual Wear Block
+                    Heels</ion-card-subtitle
+                  >
+                  <ion-label color="secondary" class="min-discount"
+                    >Min 30% off</ion-label
+                  >
+                </ion-card-content>
+              </a>
+            </ion-col>
+            <ion-col>
+              <a href="/product-details">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/trending2thumb.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                  <ion-card-title>Aurelia</ion-card-title>
+                  <ion-card-subtitle
+                    >Women Solid Straight Kurta (White)</ion-card-subtitle
+                  >
+                  <ion-label color="secondary" class="min-discount"
+                    >Min 35% off</ion-label
+                  >
+                </ion-card-content>
+              </a>
+            </ion-col>
+            <ion-col>
+              <a href="/product-details">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/trending3thumb.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                  <ion-card-title>Tommy Now</ion-card-title>
+                  <ion-card-subtitle
+                    >Tommy Hilfiger Now Eau De Toilette</ion-card-subtitle
+                  >
+                  <ion-label color="secondary" class="min-discount"
+                    >Min 25% off</ion-label
+                  >
+                </ion-card-content>
+              </a>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <a href="/product-details">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/trending4thumb.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                  <ion-card-title>Ladies Clutches</ion-card-title>
+                  <ion-card-subtitle
+                    >Women Phone Holder Case Wallet</ion-card-subtitle
+                  >
+                  <ion-label color="secondary" class="min-discount"
+                    >Min 15% off</ion-label
+                  >
+                </ion-card-content>
+              </a>
+            </ion-col>
+            <ion-col>
+              <a href="/product-details">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/trending5thumb.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                  <ion-card-title>Row Denim</ion-card-title>
+                  <ion-card-subtitle
+                    >Boys Slim Fit Tan Chinos</ion-card-subtitle
+                  >
+                  <ion-label color="secondary" class="min-discount"
+                    >Min 20% off</ion-label
+                  >
+                </ion-card-content>
+              </a>
+            </ion-col>
+            <ion-col>
+              <a href="/product-details">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/trending6thumb.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                  <ion-card-title>Mimi Jumpsuit</ion-card-title>
+                  <ion-card-subtitle>Long flowing jumpsuit</ion-card-subtitle>
+                  <ion-label color="secondary" class="min-discount"
+                    >Min 10% off</ion-label
+                  >
+                </ion-card-content>
+              </a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <ion-item class="topCategories">
+        <ion-label>Recommended for you</ion-label>
+        <ion-button color="secondary" item-right>View All</ion-button>
+      </ion-item>
+      <ion-card margin>
+        <ion-grid class="recommendedCetogories">
+          <ion-row>
+            <ion-col size="8">
+              <a href="#">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/recommendedthumb1.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                  <ion-card-title>Zathar Women</ion-card-title>
+                  <ion-card-subtitle
+                    >Green Moss|by Caramel London</ion-card-subtitle
+                  >
+                  <ion-text>
+                    <ion-label color="dark">&#8377;499</ion-label
+                    >&nbsp;<ion-label><del>1999</del></ion-label
+                    >&nbsp;
+                  </ion-text>
+                </ion-card-content>
+              </a>
+            </ion-col>
+            <ion-col size="4">
+              <ion-row class="paddingtop-zero">
+                <ion-col size="12">
+                  <a href="#">
+                    <ion-card-content>
+                      <ion-img
+                        src="../assets/icon/recommendedthumb2.jpg"
+                        alt="logoImg"
+                        class="logoImg"
+                      ></ion-img>
+                      <ion-card-title>Stylish Women</ion-card-title>
+                      <ion-card-subtitle
+                        >Dresses for slightly older & stylish
+                        women</ion-card-subtitle
+                      >
+                      <ion-text>
+                        <ion-label color="dark">&#8377;499</ion-label
+                        >&nbsp;<ion-label><del>1999</del></ion-label>
+                        &nbsp;
+                      </ion-text>
+                    </ion-card-content>
+                  </a>
+                </ion-col>
+                <ion-col size="12">
+                  <a href="#">
+                    <ion-card-content>
+                      <ion-img
+                        src="../assets/icon/recommendedthumb3.jpg"
+                        alt="logoImg"
+                        class="logoImg"
+                      ></ion-img>
+                      <ion-card-title>Pretty Woman</ion-card-title>
+                      <ion-card-subtitle
+                        >Han Edition Big Show Thin Dress</ion-card-subtitle
+                      >
+                      <ion-text>
+                        <ion-label color="dark">&#8377;499</ion-label
+                        >&nbsp;<ion-label><del>1999</del></ion-label>
+                        &nbsp;
+                      </ion-text>
+                    </ion-card-content>
+                  </a>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <ion-item class="topCategories">
+        <ion-label>Recently Viewed</ion-label>
+        <ion-button color="secondary">View All</ion-button>
+      </ion-item>
+      <ion-card margin>
+        <ion-grid class="recentlyViewed">
+          <a href="#">
+            <ion-row>
+              <ion-col size="4">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/recentlyviewedthumb1.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                </ion-card-content>
+              </ion-col>
+              <ion-col size="8">
+                <ion-card-content>
+                  <ion-card-title>Women Happy </ion-card-title>
+                  <ion-card-subtitle
+                    >Women T Shirt Fall Shirts For Women Happy
+                  </ion-card-subtitle>
+                  <ion-text>
+                    <ion-label color="dark">&#8377;499</ion-label
+                    >&nbsp;<ion-label><del>1999</del></ion-label
+                    >&nbsp;
+                    <ion-label color="secondary" class="min-discount"
+                      >75% off</ion-label
+                    >
+                  </ion-text>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+          </a>
+          <a href="#">
+            <ion-row>
+              <ion-col size="4">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/recentlyviewedthumb2.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                </ion-card-content>
+              </ion-col>
+              <ion-col size="8">
+                <ion-card-content>
+                  <ion-card-title>Fashion Wallet</ion-card-title>
+                  <ion-card-subtitle
+                    >Baggage Postal Boys Wallet Boys Short
+                    Student</ion-card-subtitle
+                  >
+                  <ion-text>
+                    <ion-label color="dark">&#8377;599</ion-label
+                    >&nbsp;<ion-label><del>1999</del></ion-label
+                    >&nbsp;
+                    <ion-label color="secondary" class="min-discount"
+                      >65% off</ion-label
+                    >
+                  </ion-text>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+          </a>
+          <a href="#">
+            <ion-row>
+              <ion-col size="4">
+                <ion-card-content>
+                  <ion-img
+                    src="../assets/icon/recentlyviewedthumb3.jpg"
+                    alt="logoImg"
+                    class="logoImg"
+                  ></ion-img>
+                </ion-card-content>
+              </ion-col>
+              <ion-col size="8">
+                <ion-card-content>
+                  <ion-card-title>Nauti Nati</ion-card-title>
+                  <ion-card-subtitle
+                    >Nauti Nati Girls Navy Blue Lace A-Line
+                    Top</ion-card-subtitle
+                  >
+                  <ion-text>
+                    <ion-label color="dark">&#8377;699</ion-label
+                    >&nbsp;<ion-label><del>1999</del></ion-label
+                    >&nbsp;
+                    <ion-label color="secondary" class="min-discount"
+                      >55% off</ion-label
+                    >
+                  </ion-text>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+          </a>
+        </ion-grid>
+      </ion-card>
+      <ion-grid class="offerbanner">
+        <ion-row>
+          <ion-col size="12">
+            <a href="#">
+              <ion-img
+                src="../assets/icon/offerbanner.jpg"
+                alt="logoImg"
+                class="logoImg"
+              ></ion-img>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ion-list *ngSwitchCase="'wish'">
+      <ion-grid class="wishList">
+        <a href="#">
+          <ion-row>
+            <ion-col size="3">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb1.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Women Happy </ion-card-title>
+                <ion-card-subtitle
+                  >Women T Shirt Fall Shirts For Women Happy
+                </ion-card-subtitle>
+                <ion-text>
+                  <ion-label color="dark">&#8377;499</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >75% off</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="1" text-center>
+              <ion-icon name="trash"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </a>
+        <a href="#">
+          <ion-row>
+            <ion-col size="3">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb2.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Fashion Wallet</ion-card-title>
+                <ion-card-subtitle
+                  >Baggage Postal Boys Wallet Boys Short
+                  Student</ion-card-subtitle
+                >
+                <ion-text>
+                  <ion-label color="dark">&#8377;599</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >65% off</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="1" text-center>
+              <ion-icon name="trash"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </a>
+        <a href="#">
+          <ion-row>
+            <ion-col size="3">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb3.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Nauti Nati</ion-card-title>
+                <ion-card-subtitle
+                  >Nauti Nati Girls Navy Blue Lace A-Line Top</ion-card-subtitle
+                >
+                <ion-text>
+                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >55% off</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="1" text-center>
+              <ion-icon name="trash"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </a>
+        <a href="#">
+          <ion-row>
+            <ion-col size="3">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb1.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Women Happy </ion-card-title>
+                <ion-card-subtitle
+                  >Women T Shirt Fall Shirts For Women Happy
+                </ion-card-subtitle>
+                <ion-text>
+                  <ion-label color="dark">&#8377;499</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >75% off</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="1" text-center>
+              <ion-icon name="trash"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </a>
+        <a href="#">
+          <ion-row>
+            <ion-col size="3">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb2.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Fashion Wallet</ion-card-title>
+                <ion-card-subtitle
+                  >Baggage Postal Boys Wallet Boys Short
+                  Student</ion-card-subtitle
+                >
+                <ion-text>
+                  <ion-label color="dark">&#8377;599</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >65% off</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="1" text-center>
+              <ion-icon name="trash"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </a>
+        <a href="#">
+          <ion-row>
+            <ion-col size="3">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb3.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Nauti Nati</ion-card-title>
+                <ion-card-subtitle
+                  >Nauti Nati Girls Navy Blue Lace A-Line Top</ion-card-subtitle
+                >
+                <ion-text>
+                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >55% off</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="1" text-center>
+              <ion-icon name="trash"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </a>
+      </ion-grid>
+      <ion-button ion-button color="secondary" expand="full" class="clearBtn"
+        >Clear All</ion-button
+      >
+    </ion-list>
+    <ion-list *ngSwitchCase="'cart'">
+      <ion-grid class="cartList">
+        <a href="#">
+          <ion-row>
+            <ion-col size="4">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb1.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Women Happy </ion-card-title>
+                <ion-card-subtitle
+                  >Women T Shirt Fall Shirts For Women Happy
+                </ion-card-subtitle>
+                <ion-card-subtitle>Size: M </ion-card-subtitle>
+                <ion-text>
+                  <ion-label color="dark">&#8377;499</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >75% off</ion-label
+                  > </ion-text
+                ><br />
+                <ion-text>
+                  <ion-label color="secondary" class="min-discount"
+                    >Offer applied for this order!</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+          </ion-row>
+        </a>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="5">
+              <ion-item class="cartQuantity">
+                <ion-label>QTY:</ion-label>
+                <ion-select interface="popover">
+                  <ion-select-option value="one" [selected]="true"
+                    >1</ion-select-option
+                  >
+                  <ion-select-option value="two">2</ion-select-option>
+                  <ion-select-option value="three">3</ion-select-option>
+                  <ion-select-option value="four">4</ion-select-option>
+                  <ion-select-option value="four">5</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="7">
+              <ion-row class="cartAction">
+                <ion-col size="6">
+                  <ion-button color="secondary" expand="full"
+                    >Buy Later</ion-button
+                  >
+                </ion-col>
+                <ion-col size="6">
+                  <ion-button color="warning" expand="full">Remove</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <a href="#">
+          <ion-row>
+            <ion-col size="4">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb2.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Women Happy </ion-card-title>
+                <ion-card-subtitle
+                  >Women T Shirt Fall Shirts For Women Happy
+                </ion-card-subtitle>
+                <ion-card-subtitle>Size: M </ion-card-subtitle>
+                <ion-text>
+                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >55% off</ion-label
+                  > </ion-text
+                ><br />
+                <ion-text>
+                  <ion-label color="secondary" class="min-discount"
+                    >Offer applied for this order!</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+          </ion-row>
+        </a>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="5">
+              <ion-item class="cartQuantity">
+                <ion-label>QTY:</ion-label>
+                <ion-select interface="popover">
+                  <ion-select-option value="one" [selected]="true"
+                    >1</ion-select-option
+                  >
+                  <ion-select-option value="two">2</ion-select-option>
+                  <ion-select-option value="three">3</ion-select-option>
+                  <ion-select-option value="four">4</ion-select-option>
+                  <ion-select-option value="four">5</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="7">
+              <ion-row class="cartAction">
+                <ion-col size="6">
+                  <ion-button color="secondary" expand="full"
+                    >Buy Later</ion-button
+                  >
+                </ion-col>
+                <ion-col size="6">
+                  <ion-button color="warning" expand="full">Remove</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <a href="#">
+          <ion-row>
+            <ion-col size="4">
+              <ion-card-content>
+                <ion-img
+                  src="../assets/icon/recentlyviewedthumb3.jpg"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+              </ion-card-content>
+            </ion-col>
+            <ion-col size="8">
+              <ion-card-content>
+                <ion-card-title>Women Happy </ion-card-title>
+                <ion-card-subtitle
+                  >Women T Shirt Fall Shirts For Women Happy
+                </ion-card-subtitle>
+                <ion-card-subtitle>Size: M </ion-card-subtitle>
+                <ion-text>
+                  <ion-label color="dark">&#8377;599</ion-label>&nbsp;<ion-label
+                    ><del>1999</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >65% off</ion-label
+                  > </ion-text
+                ><br />
+                <ion-text>
+                  <ion-label color="secondary" class="min-discount"
+                    >Offer applied for this order!</ion-label
+                  >
+                </ion-text>
+              </ion-card-content>
+            </ion-col>
+          </ion-row>
+        </a>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="5">
+              <ion-item class="cartQuantity">
+                <ion-label>QTY:</ion-label>
+                <ion-select interface="popover">
+                  <ion-select-option value="one" [selected]="true"
+                    >1</ion-select-option
+                  >
+                  <ion-select-option value="two">2</ion-select-option>
+                  <ion-select-option value="three">3</ion-select-option>
+                  <ion-select-option value="four">4</ion-select-option>
+                  <ion-select-option value="four">5</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="7">
+              <ion-row class="cartAction">
+                <ion-col size="6">
+                  <ion-button color="secondary" expand="full"
+                    >Buy Later</ion-button
+                  >
+                </ion-col>
+                <ion-col size="6">
+                  <ion-button color="warning" expand="full">Remove</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-grid>
+      <ion-button ion-button color="secondary" expand="full" class="proceedBtn"
+        >Buy Now</ion-button
+      >
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,78 @@
+.productDetails ion-card-title,
+.similarProductList ion-card-title {
+  font-family: OpenSans-BoldItalic;
+  font-size: 12px;
+}
+.productDetails ion-card-subtitle,
+.similarProductList ion-card-subtitle {
+  font-family: OpenSans-Italic;
+  font-size: 10px;
+}
+.similarProductList ion-img {
+  margin-bottom: 20px;
+  border: 1px solid #ebebeb;
+  height: auto;
+}
+.productDetails {
+  font-size: 12px;
+}
+.productDetails ion-icon {
+  zoom: 1.4;
+  color: #bfbfbf;
+}
+.productAmount .min-discount {
+  font-family: OpenSans-Light;
+}
+.cartQuantity {
+  padding: 0;
+}
+.cartQuantity ion-label,
+.cartAction ion-button {
+  font-size: 12px;
+  font-family: OpenSans-Regular;
+}
+.cartQuantity ion-item {
+  border: none;
+}
+.prodTabHead,
+.similarProduct {
+  padding: 16px 16px 0px 0px;
+  font-family: OpenSans-Bold;
+}
+.productDetails .prodDetailsTab ion-card-title,
+.prodDescTab p {
+  font-family: OpenSans-Italic;
+  margin: 12px 0;
+  color: #808284;
+}
+.prodDescTab p {
+  padding: 16px;
+}
+.reviewTab ion-icon {
+  zoom: 1;
+  color: unset;
+  vertical-align: text-top;
+}
+.reviewTab ion-text {
+  font-family: OpenSans-Italic;
+  margin: 12px 0;
+  color: #808284;
+}
+.similarProductList {
+  margin-bottom: 40px;
+}
+.buyBtn,
+.addCartBtn {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  z-index: 999;
+}
+.addCartBtn {
+  left: 0;
+}
+.buyBtn {
+  right: 0;
+}

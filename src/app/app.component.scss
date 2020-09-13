@@ -1,0 +1,18 @@
+.logotext {
+    font-family: OpenSans-ExtraBold;
+    font-size: 26px;
+    padding: 0;
+    color: #0cd1e8;
+}
+.logotext:hover {
+    color: #0cd1e8;
+}
+
+ion-content {
+    background-image: url("../assets/icon/appBackground2.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}

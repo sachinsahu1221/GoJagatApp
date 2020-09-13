@@ -1,0 +1,47 @@
+.orderlist {
+  margin-bottom: 40px;
+}
+.orderlist ion-card-title {
+  font-family: OpenSans-BoldItalic;
+  font-size: 14px;
+}
+.orderlist ion-card-subtitle {
+  font-family: OpenSans-Italic;
+  font-size: 10px;
+}
+.orderlist ion-card-content {
+  text-align: left;
+}
+.orderlist a ion-row {
+  border-bottom: 1px solid #ebebeb;
+}
+.orderlist a ion-row ion-icon {
+  color: rgba(0, 0, 0, 0.6);
+}
+.orderStatus li {
+  list-style: none;
+}
+.orderStatus span {
+  font-size: 14px;
+  font-family: OpenSans-Italic;
+}
+.orderStatus span:before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  font-size: 26px;
+  vertical-align: sub;
+}
+.orderStatus span.canceled::before {
+  color: red;
+}
+.orderStatus span.delivered::before {
+  color: #0cd1e8;
+}
+.orderStatus span.returned::before {
+  color: #ffce00;
+}
+.orderStatus span.placed::before {
+  color: #0ec254;
+}

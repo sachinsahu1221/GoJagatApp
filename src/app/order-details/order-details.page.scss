@@ -1,0 +1,91 @@
+.orderDetails {
+  margin-bottom: 40px;
+}
+.orderDetails ion-card-title {
+  font-family: OpenSans-BoldItalic;
+  font-size: 14px;
+}
+.orderDetails ion-card-subtitle {
+  font-family: OpenSans-Italic;
+  font-size: 10px;
+}
+.orderDetails ion-card-content {
+  text-align: left;
+}
+.orderDetails a ion-row {
+  border-bottom: 1px solid #ebebeb;
+}
+.orderDetails a ion-row ion-icon {
+  color: rgba(0, 0, 0, 0.6);
+}
+.orderStatus li {
+  list-style: none;
+}
+.orderStatus span {
+  font-size: 14px;
+  font-family: OpenSans-Italic;
+}
+.orderStatus span:before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  font-size: 26px;
+  vertical-align: sub;
+}
+.orderStatus span.canceled::before {
+  color: red;
+}
+.orderStatus span.delivered::before {
+  color: #0cd1e8;
+}
+.orderStatus span.returned::before {
+  color: #ffce00;
+}
+.orderStatus span.placed::before {
+  color: #0ec254;
+}
+.sizeColor {
+  display: block;
+  color: #989aa2;
+}
+.min-discount {
+  font-family: OpenSans-Light;
+  font-size: 12px;
+}
+.starRating {
+  zoom: 1.5;
+}
+.starRating ion-icon,
+.invoice ion-icon {
+  vertical-align: middle;
+  color: #828282;
+}
+.buyBtn,
+.addCartBtn {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  z-index: 999;
+  float: left;
+}
+.prodDetailsTab ion-card-title,
+.prodDescTab p {
+  font-family: OpenSans-Italic;
+  margin: 12px 0;
+  color: #808284;
+  font-size: 12px;
+}
+.prodTabHead {
+  padding: 16px 16px 0px 0px;
+  font-family: OpenSans-Bold;
+}
+.prodDetailsTab .totalAmount {
+  padding-top: 20px;
+  font-family: OpenSans-BoldItalic;
+}
+.reviewTab ion-text {
+  font-family: OpenSans-Italic;
+  margin: 12px 0;
+  color: #808284;
+}
