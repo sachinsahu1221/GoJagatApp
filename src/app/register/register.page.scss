@@ -1,9 +1,59 @@
-.logoContainer img {
-  margin: 16% 0;
+ion-content {
+  --ion-background-color: rgba(147, 206, 222, 1);
+  --ion-background-color: -moz-linear-gradient(
+    top,
+    rgba(147, 206, 222, 1) 0%,
+    rgba(44, 165, 199, 1) 42%,
+    rgba(43, 145, 173, 1) 100%
+  );
+  --ion-background-color: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(147, 206, 222, 1)),
+    color-stop(42%, rgba(44, 165, 199, 1)),
+    color-stop(100%, rgba(43, 145, 173, 1))
+  );
+  --ion-background-color: -webkit-linear-gradient(
+    top,
+    rgba(147, 206, 222, 1) 0%,
+    rgba(44, 165, 199, 1) 42%,
+    rgba(43, 145, 173, 1) 100%
+  );
+  --ion-background-color: -o-linear-gradient(
+    top,
+    rgba(147, 206, 222, 1) 0%,
+    rgba(44, 165, 199, 1) 42%,
+    rgba(43, 145, 173, 1) 100%
+  );
+  --ion-background-color: -ms-linear-gradient(
+    top,
+    rgba(147, 206, 222, 1) 0%,
+    rgba(44, 165, 199, 1) 42%,
+    rgba(43, 145, 173, 1) 100%
+  );
+  --ion-background-color: linear-gradient(
+    to bottom,
+    rgba(147, 206, 222, 1) 0%,
+    rgba(44, 165, 199, 1) 42%,
+    rgba(43, 145, 173, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#2b91ad', GradientType=0 );
+}
+.logotext {
+  font-family: OpenSans-ExtraBold;
+  font-size: 36px;
+  padding: 0;
+  color: #045d75;
+}
+.logoContainer {
+  padding-top: 10%;
+}
+.form-styles {
+  margin: 10% 0 20% 0;
 }
 .item {
   border-radius: 26px;
-  border: 2px solid #b9becf;
+  border: 1px solid #f2f2f2;
   outline: none;
   color: #f2f2f2;
   --ion-background-color: transparent;
@@ -23,7 +73,7 @@
   width: 100%;
   border-radius: 26px;
   background: transparent;
-  border: 2px solid #b9becf;
+  border: 2px solid #f2f2f2;
   font-size: 18px;
   color: #fff;
   outline: none;
@@ -38,29 +88,12 @@
   text-decoration: none;
 }
 
-ion-content {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00a99d+0,01a4ab+31,009eb1+59,0099b9+100 */
-  --ion-background-color: rgb(0, 169, 157); /* Old browsers */
-  --ion-background-color: -moz-linear-gradient(
-    top,
-    rgba(0, 169, 157, 1) 0%,
-    rgba(1, 164, 171, 1) 31%,
-    rgba(0, 158, 177, 1) 59%,
-    rgba(0, 153, 185, 1) 100%
-  ); /* FF3.6-15 */
-  --ion-background-color: -webkit-linear-gradient(
-    top,
-    rgba(0, 169, 157, 1) 0%,
-    rgba(1, 164, 171, 1) 31%,
-    rgba(0, 158, 177, 1) 59%,
-    rgba(0, 153, 185, 1) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  --ion-background-color: linear-gradient(
-    to bottom,
-    rgba(0, 169, 157, 1) 0%,
-    rgba(1, 164, 171, 1) 31%,
-    rgba(0, 158, 177, 1) 59%,
-    rgba(0, 153, 185, 1) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a99d', endColorstr='#0099b9',GradientType=0 ); /* IE6-9 */
+ion-fab .fabIcon {
+  --ion-color-base: transparent !important;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2;
+}
+.fabIcon ion-icon,
+.close-icon {
+  color: #f2f2ff;
 }

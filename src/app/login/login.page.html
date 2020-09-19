@@ -6,15 +6,16 @@
     <ion-title text-center>LOGIN</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content class="user-background">
   <div text-center class="logoContainer">
     <!-- <img src="../assets/icon/appBackground2.jpg" alt="logoImg" width="46%" class="logoImg"> -->
     <ion-text class="logotext">GOJAGAT</ion-text>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-      industry's standard dummy text ever since the 1500s.
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text.
     </p>
   </div>
-  <form>
+  <form class="form-styles">
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -23,17 +24,31 @@
               <ion-label>
                 <ion-icon name="person" slot="start"></ion-icon>
               </ion-label>
-              <ion-input name="name" type="text" placeholder="User name" required [(ngModel)]="username"></ion-input>
+              <ion-input
+                name="name"
+                type="text"
+                placeholder="User name"
+                required
+                [(ngModel)]="username"
+              ></ion-input>
             </ion-item>
             <ion-item>
               <ion-label>
                 <ion-icon name="lock" slot="start"></ion-icon>
               </ion-label>
-              <ion-input name="password" type="password" placeholder="Password" required [(ngModel)]="password"></ion-input>
+              <ion-input
+                name="password"
+                type="password"
+                placeholder="Password"
+                required
+                [(ngModel)]="password"
+              ></ion-input>
             </ion-item>
           </div>
           <div text-center padding class="padTopZero">
-            <button type="submit" class="formSubBtn" (click)="login()">Login</button>
+            <button type="submit" class="formSubBtn" (click)="login()">
+              Login
+            </button>
           </div>
           <div padding text-center class="btmText">
             <label>
@@ -41,7 +56,8 @@
             </label>
           </div>
           <div padding text-center class="btmText">
-            <label>Don't have an account?
+            <label
+              >Don't have an account?
               <a href="/register">Register</a>
             </label>
           </div>
@@ -69,7 +85,4 @@
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
-
-
-
 </ion-content>
