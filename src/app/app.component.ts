@@ -21,6 +21,11 @@ export class AppComponent {
       url: '/order-list',
       icon: 'list'
     },
+    {
+      title: 'BUY LATER',
+      url: '/buy-later',
+      icon: 'list'
+    },
   ];
 
   constructor(
