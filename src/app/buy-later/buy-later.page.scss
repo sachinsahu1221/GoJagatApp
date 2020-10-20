@@ -1,3 +1,6 @@
+.cartList {
+  margin-bottom: 40px;
+}
 .cartList ion-card-title {
   font-family: OpenSans-BoldItalic;
   font-size: 14px;
@@ -15,4 +18,12 @@
 .cartAction ion-button {
   font-size: 12px;
   font-family: OpenSans-Regular;
+}
+.buyBtn {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 999;
 }
