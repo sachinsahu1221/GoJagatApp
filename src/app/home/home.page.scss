@@ -115,6 +115,12 @@ ion-list {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+.chip-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 // ion-content {
 //   --ion-background-color: rgb(68, 170, 87); /* Old browsers */
 //   --ion-background-color: -moz-linear-gradient(

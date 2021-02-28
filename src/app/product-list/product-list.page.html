@@ -14,223 +14,27 @@
   <ion-card margin>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col *ngFor="let p of productList">
           <ion-card>
             <a href="/product-details">
               <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
+                <ion-img
+                  [src]="p.imageURL"
+                  alt="logoImg"
+                  class="logoImg"
+                ></ion-img>
+                <ion-card-title>{{p.name}}</ion-card-title>
+                <ion-card-subtitle>{{p.description}}</ion-card-subtitle>
                 <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist1.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
-                </ion-text>
-              </ion-card-content>
-            </a>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <a href="/product-details">
-              <ion-card-content class="category">
-                <ion-img src="../assets/icon/fashionlist2.jpg" alt="logoImg" class="logoImg"></ion-img>
-                <ion-card-title>Jocky Boys</ion-card-title>
-                <ion-card-subtitle>Jockey Navy Boys Sweatshirt</ion-card-subtitle>
-                <ion-text>
-                  <ion-label color="dark">&#8377;699</ion-label>&nbsp;<ion-label><del>1999</del></ion-label>&nbsp;
-                  <ion-label color="secondary" class="min-discount">35% off</ion-label>
+                  <ion-label color="dark"
+                    >{{p.sellingPrice | currency : 'INR' : 'symbol' :
+                    '1.0-0'}}</ion-label
+                  >&nbsp;<ion-label><del>{{p.listPrice}}</del></ion-label
+                  >&nbsp;
+                  <ion-label color="secondary" class="min-discount"
+                    >{{(p.listPrice - p.sellingPrice)/p.listPrice * 100 |
+                    number: '1.0-0'}}% off</ion-label
+                  >
                 </ion-text>
               </ion-card-content>
             </a>
@@ -239,5 +43,4 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-
 </ion-content>
